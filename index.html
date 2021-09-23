@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Include Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <!-- Include Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Set Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Manipulation</title>
+    <!-- Import Styles -->
+    <link rel="stylesheet" href=".\assets\styles.css" />
+    <!-- Import Vue.js -->
+    <script src="https://unpkg.com/vue@next"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <div class="d-flex justify-content-center text-center py-5">
+                    <div class="jumbotron">
+                        <h3>Type a word</h3>
+                        <div id="app">
+                            <div class="input-group mb-3">
+                                <input id="inputField" v-model="input" type="text" class="form-control" placeholder="Type here..." aria-label="Type here..." aria-describedby="basic-addon2">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary" type="button" id="button" @click="showMessage(input)">Show</button>
+                                </div>
+                            </div>
+                            <div id="outputArea" style="text-align: left;">
+                                <ol>
+                                    <li>
+                                        {{msg}}
+                                    </li>
+                                    <li>
+                                        {{msgLower}}
+                                    </li>
+                                    <li>
+                                        {{msgUpper}}
+                                    </li>
+                                </ol>
+
+                                <table class="table table-striped table-bordered">
+                                    <tbody>
+                                      <tr>
+                                        <td scope="row" class="col-md-2">1.</th>
+                                        <td>{{msg}}</td>
+                                      </tr>
+                                      <tr>
+                                        <td scope="row" class="col-md-2">2.</th>
+                                        <td>{{msgLower}}</td>
+                                      </tr>
+                                      <tr>
+                                        <td scope="row" class="col-md-2">3.</th>
+                                        <td>{{msgUpper}}</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Import App -->
+                    <script src="./main.js"></script>
+                    
+                    <!-- Import Components -->
+                    <!-- <script src="./components/InputDisplay.js"></script> -->
+
+                    <!-- Mount App -->
+                    <script>
+                        const mountedApp = app.mount('#app')
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
